@@ -19,4 +19,9 @@ public class RepositorioCrearCategoria implements RepositorioCategoria {
     public void crear(Categoria categoria) {
         this.categoriaRepository.guardarCategoria(categoria.getNombre(), categoria.getDescripcion());
     }
+
+    @Override
+    public Long existe(String nombre) {
+        return categoriaRepository.buscarPorNombre(nombre);
+    }
 }

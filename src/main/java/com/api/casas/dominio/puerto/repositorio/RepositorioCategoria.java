@@ -6,4 +6,6 @@ public interface RepositorioCategoria {
 
     void crear(Categoria categoria);
 
+    Long existe(String nombre);
+
 }

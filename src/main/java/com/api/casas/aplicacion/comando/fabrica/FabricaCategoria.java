@@ -9,7 +9,6 @@ public class FabricaCategoria {
 
     public Categoria crear(ComandoCategoria comandoCategoria) {
         return new Categoria(
-                comandoCategoria.getId(),
                 comandoCategoria.getNombre(),
                 comandoCategoria.getDescripcion()
         );

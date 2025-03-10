@@ -31,6 +31,8 @@ dependencies {
 	runtimeOnly("com.mysql:mysql-connector-j")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("org.mockito:mockito-core:5.16.0")
+	testImplementation("org.mockito:mockito-junit-jupiter:5.16.0")
 }
 
 tasks.withType<Test> {
