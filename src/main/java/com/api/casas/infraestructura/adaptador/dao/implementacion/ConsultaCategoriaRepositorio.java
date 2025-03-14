@@ -8,12 +8,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.math.BigInteger;
-
 @Repository
-public interface ConsultaCategoriaRepositorio extends JpaRepository<Categoria, BigInteger> {
+public interface ConsultaCategoriaRepositorio extends JpaRepository<Categoria, Long> {
 
-    @Query(value = "SELECT ID, NOMBRE, DESCRIPCION FROM categoria_casa WHERE nombre = ?2", nativeQuery = true)
-    Page<DtoCategoria> buscarTodos(Pageable pageable, String categoria);
+    @Query(value = "SELECT ID, NOMBRE, DESCRIPCION FROM categoria_casa WHERE nombre like %?1%", nativeQuery = true)
+    Page<DtoCategoria> buscarTodos(String categoria, Pageable pageable);
 
 }
