@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/categoria")
 //@Api(tags = { "Controlador comando usuario"})
 public class ComandoControladorCategoria {
 
@@ -19,7 +19,7 @@ public class ComandoControladorCategoria {
         this.manejadorCrearCategoria = manejadorCrearCategoria;
     }
 
-    @PostMapping
+    @PostMapping(value = "/crear")
     //@ApiOperation("Crear Usuario")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoCategoria comandoCategoria) {
         return manejadorCrearCategoria.ejecutar(comandoCategoria);
