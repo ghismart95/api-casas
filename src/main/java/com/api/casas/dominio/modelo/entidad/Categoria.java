@@ -11,7 +11,6 @@ import lombok.Getter;
 import static com.api.casas.comun.dominio.ValidadorArgumento.validarLongitud;
 import static com.api.casas.comun.dominio.ValidadorArgumento.validarObligatorio;
 
-import java.math.BigInteger;
 
 
 @Getter
