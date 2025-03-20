@@ -13,7 +13,7 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     @Query(value = "INSERT INTO categoria_casa (nombre, descripcion) VALUES (?1, ?2)", nativeQuery = true)
     void guardarCategoria(String nombre, String descripcion);
 
-    @Query(value = "SELECT COUNT(*) >= 1 FROM categoria_casa WHERE NOMBRE = ?1", nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) >= 1 FROM categoria_casa WHERE NOMBRE LIKE %?1%", nativeQuery = true)
     Long buscarPorNombre(String nombre);
 
 }

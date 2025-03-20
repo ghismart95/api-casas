@@ -20,6 +20,6 @@ public class RepositorioDaoCategoria implements DaoCategoria {
 
     @Override
     public Page<DtoCategoria> listar(Pageable pageable, String categoria) {
-        return this.consultaCategoriaRepositorio.buscarTodos(pageable, categoria);
+        return this.consultaCategoriaRepositorio.buscarTodos(categoria, pageable);
     }
 }
