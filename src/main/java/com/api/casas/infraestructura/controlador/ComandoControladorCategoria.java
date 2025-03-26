@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/categoria")
-//@Api(tags = { "Controlador comando usuario"})
 public class ComandoControladorCategoria {
 
     private final ManejadorCrearCategoria manejadorCrearCategoria;
@@ -20,7 +19,6 @@ public class ComandoControladorCategoria {
     }
 
     @PostMapping(value = "/crear")
-    //@ApiOperation("Crear Usuario")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoCategoria comandoCategoria) {
         return manejadorCrearCategoria.ejecutar(comandoCategoria);
     }

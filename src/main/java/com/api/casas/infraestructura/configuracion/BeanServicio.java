@@ -1,8 +1,10 @@
 package com.api.casas.infraestructura.configuracion;
 
 import com.api.casas.dominio.puerto.repositorio.RepositorioCategoria;
+import com.api.casas.dominio.puerto.repositorio.RepositorioUbicacion;
 import com.api.casas.dominio.puerto.repositorio.RepositorioVendedor;
 import com.api.casas.dominio.servicio.ServicioCrearCategoria;
+import com.api.casas.dominio.servicio.ServicioCrearUbicacion;
 import com.api.casas.dominio.servicio.ServicioCrearVendedor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +20,11 @@ public class BeanServicio {
     @Bean
     public ServicioCrearVendedor servicioCrearVendedor(RepositorioVendedor repositorioVendedor) {
         return new ServicioCrearVendedor(repositorioVendedor);
+    }
+
+    @Bean
+    public ServicioCrearUbicacion servicioCrearUbicacion(RepositorioUbicacion repositorioUbicacion) {
+        return new ServicioCrearUbicacion(repositorioUbicacion);
     }
 
 }
