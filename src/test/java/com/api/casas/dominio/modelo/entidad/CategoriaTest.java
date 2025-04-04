@@ -54,7 +54,7 @@ public class CategoriaTest {
         try {
             categoriaTestDataBuilder.build();
         } catch (ExcepcionLongitudValor excepcionValorObligatorio) {
-            Assertions.assertEquals("La longitud minima de la descripcion debe ser de 90", excepcionValorObligatorio.getMessage());
+            Assertions.assertEquals("La longitud maxima de la descripcion debe ser de 90", excepcionValorObligatorio.getMessage());
         }
     }
 }
